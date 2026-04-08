@@ -4,14 +4,28 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Регистрация - Лабораторная 10</title>
+    <title>Лабораторная 10 - Топчий</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>📝 Форма регистрации</h2>
+    <h2>🧮 Калькулятор</h2>
     <form action="action.php" method="POST">
-        <label>Имя: <input type="text" name="name" placeholder="Введите имя"></label><br>
-        <label>Email: <input type="email" name="email" placeholder="example@mail.com" required></label><br>
+        <label>Число 1: <input type="number" step="any" name="num1" required></label>
+        <label>Число 2: <input type="number" step="any" name="num2" required></label>
+        <div style="display: flex; gap: 5px;">
+            <button type="submit" name="operation" value="add">+</button>
+            <button type="submit" name="operation" value="sub">−</button>
+            <button type="submit" name="operation" value="mul">×</button>
+            <button type="submit" name="operation" value="div">÷</button>
+        </div>
+    </form>
+    
+    <hr>
+    
+    <h2>📝 Регистрация</h2>
+    <form action="action.php" method="POST">
+        <label>Имя: <input type="text" name="name"></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
         <label>Пароль: <input type="password" name="password" required></label><br>
         <label>Пол:
             <select name="gender">
@@ -22,7 +36,6 @@
         </label><br>
         <button type="submit">Зарегистрироваться</button>
     </form>
-    <p><a href="?page=calc">→ Перейти к калькулятору</a></p>
 </body>
 </html>
 >>>>>>> 55a6057 (Добавлена форма регистрации с полями: имя, email, пароль, пол)
